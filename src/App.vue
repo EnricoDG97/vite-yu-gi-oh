@@ -22,10 +22,8 @@
 
 <template>
     <div class="background">
-        <div class="container">
-            <AppHeader/>
-            <AppMain/>
-        </div>
+        <AppHeader/>
+        <AppMain/>
     </div>
 
 </template>
