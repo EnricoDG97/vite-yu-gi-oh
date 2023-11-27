@@ -10,7 +10,7 @@
 
 <template>
  <div class="container">
-    header
+    main
 </div>
 
 </template>
