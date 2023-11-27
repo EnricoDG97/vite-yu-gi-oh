@@ -22,18 +22,38 @@
 
 <template>
     <div class="background">
+
         <AppHeader/>
-        <AppMain/>
+        
+        <select class="form-select container" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+        </select>
+
+        <div class="container main-c">
+            <AppMain/>
+        </div>
     </div>
 
 </template>
 
 <style lang="scss">
 @use "./style/general.scss";
+@use "../src/style/partials/mixins" as *;
 
 .background {
     background-color: #e5bc55;
     height: 100vh;
+    .form-select {
+        width: fit-content;
+        margin-top: 40px;
+    }
+    .container.main-c {
+        background-color: white;
+        min-height: 60vh;
+        margin-top: 40px;
+    }
 }
 
 </style>
