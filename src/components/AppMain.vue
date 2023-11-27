@@ -1,10 +1,14 @@
 <script>
+import { store } from "../store";
+import AppCard from "./AppCard.vue";
+
 export default {
     data() {
         return {
-
+            store,
         }
-    }
+    },
+    components: { AppCard },
 }
 </script>
 
@@ -12,17 +16,12 @@ export default {
     <div class="container-fluid">
         <div class="number-of-cards">
             <h3>
-                Found ... Cards
+                Found {{ store.cards.length }} Cards
             </h3>
         </div>
         <div class="cards">
-            <div class="card col">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">
-                        titolo
-                    </p>
-                </div>
+            <div class="card" v-for="card in store.cards" :key="card.id">
+                <AppCard :card="card"/>
             </div>
         </div>
     </div>
@@ -48,12 +47,12 @@ export default {
     .cards {
         width: 100%;
         @include flex(row, space-between, start);
+        align-items: normal;
+        flex-wrap: wrap;
         gap: 12px;
-        .card.col {
-            max-width: calc(100% / 5);
-            img {
-                width: 100%;
-            }
+        .card {
+            width: calc((100% / 5) - 12px);
+            background-color: #e5bc55;
         }
     }
 }

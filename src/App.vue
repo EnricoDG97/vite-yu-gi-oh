@@ -44,7 +44,7 @@
 
 .background {
     background-color: #e5bc55;
-    height: 100vh;
+    height: 100%;
     .form-select {
         width: fit-content;
         margin-top: 40px;
