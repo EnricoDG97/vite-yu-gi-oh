@@ -3,9 +3,10 @@
     import { store } from "./store.js";
     import AppHeader from './components/AppHeader.vue';
     import AppMain from './components/AppMain.vue';
+    import AppSelector from "./components/AppSelector.vue";
 
     export default {
-        components: { AppHeader, AppMain },
+        components: { AppHeader, AppMain, AppSelector },
         data() {
             return {
                 store,
@@ -29,11 +30,7 @@
 
         <AppHeader/>
         
-        <select class="form-select container" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-        </select>
+        <AppSelector/>
 
         <div class="container main-c">
             <AppMain/>
