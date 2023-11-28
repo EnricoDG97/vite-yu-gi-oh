@@ -21,6 +21,11 @@
                 // set to false so it disappear
                 this.store.loading = false;
             })
+        },
+        methods: {
+            handleChangeSelect() {
+                console.log("cambia-opzione");
+            }
         }
     }
 </script>
@@ -30,7 +35,7 @@
 
         <AppHeader/>
         
-        <AppSelector/>
+        <AppSelector @changeSelect="handleChangeSelect"/>
 
         <div class="container main-c">
             <AppMain/>
