@@ -1,6 +1,7 @@
 <script>
 import { store } from "../store";
 import AppCard from "./AppCard.vue";
+import AppLoader from "./AppLoader.vue";
 
 export default {
     data() {
@@ -8,7 +9,7 @@ export default {
             store,
         }
     },
-    components: { AppCard },
+    components: { AppCard, AppLoader },
 }
 </script>
 
@@ -19,7 +20,8 @@ export default {
                 Found {{ store.cards.length }} Cards
             </h3>
         </div>
-        <div class="cards">
+        <AppLoader v-if="store.loading"/>
+        <div class="cards" v-else>
             <div class="card" v-for="card in store.cards" :key="card.id">
                 <AppCard :card="card"/>
             </div>
