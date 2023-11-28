@@ -12,7 +12,7 @@ export default {
     <div class="navbar">
         <div class="container">
             <span class="logo">
-                logo
+                <img src="../assets/img/logo.jpg" alt="logo">
             </span>
             <div class="navbar-text">
                 <h2>
@@ -35,8 +35,10 @@ export default {
         gap: 20px;
     
         .logo {
-            height: 30px;
-            width: 30px;
+            img {
+                height: 50px;
+                width: 50px;
+            } 
         }
     
         .navbar-text {
